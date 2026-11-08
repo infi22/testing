@@ -1,0 +1,500 @@
+<title>הצעד הבא</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=Secular+One&display=swap">
+<style>
+/* Layout: one calm column, one question per screen; the path is a numbered sequence; the "what to say" line is a clinic note you can read aloud */
+:root {
+  --bg: #F2F6F5;
+  --surface: #FFFFFF;
+  --ink: #12303A;
+  --muted: #566C71;
+  --line: #D8E2E1;
+  --accent: #0E7465;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCEFEB;
+  --note: #FFF3C4;
+  --note-ink: #4A3A00;
+  --note-line: #E9D67E;
+  --slot: #F7F9F9;
+  --slot-line: #A3B6B6;
+  --font-display: "Secular One", "IBM Plex Sans Hebrew", Arial, sans-serif;
+  --font-body: "IBM Plex Sans Hebrew", "Assistant", Arial, sans-serif;
+  --s-1: 0.875rem;
+  --s0: 1.0625rem;
+  --s1: 1.25rem;
+  --s2: 1.6rem;
+  --s3: 2.2rem;
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D191C; --surface: #13252A; --ink: #E3EEEC; --muted: #97ABAA; --line: #24393D;
+    --accent: #4FC2AE; --accent-ink: #06211C; --accent-soft: #17352F;
+    --note: #3A3315; --note-ink: #F4E6A6; --note-line: #5C5124;
+    --slot: #102024; --slot-line: #3E5659;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D191C; --surface: #13252A; --ink: #E3EEEC; --muted: #97ABAA; --line: #24393D;
+  --accent: #4FC2AE; --accent-ink: #06211C; --accent-soft: #17352F;
+  --note: #3A3315; --note-ink: #F4E6A6; --note-line: #5C5124;
+  --slot: #102024; --slot-line: #3E5659;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--s0);
+  line-height: 1.65;
+  direction: rtl;
+}
+.wrap {
+  max-width: 680px;
+  margin-inline: auto;
+  padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+.brand { display: flex; align-items: baseline; gap: 10px; color: var(--muted); font-size: var(--s-1); flex-wrap: wrap; }
+.brand b { font-family: var(--font-display); font-weight: 400; font-size: var(--s1); color: var(--accent); }
+
+.intro { display: flex; flex-direction: column; gap: 10px; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: var(--s3); line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-size: var(--s1); margin: 0; line-height: 1.3; }
+.lede { margin: 0; color: var(--muted); max-width: 36em; }
+
+/* Home */
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 520px) { .tiles { grid-template-columns: 1fr; } }
+.tile {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 18px; min-height: 44px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  text-decoration: none; color: inherit;
+}
+.tile:hover { border-color: var(--accent); }
+.tile.wide { grid-column: 1 / -1; }
+.tile-name { font-weight: 600; font-size: var(--s1); line-height: 1.3; }
+.tile-sub { color: var(--muted); font-size: var(--s-1); }
+.pill {
+  align-self: flex-start; font-size: 0.8rem; font-weight: 600;
+  padding: 2px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
+.pill.muted { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+/* Path */
+.back { align-self: flex-start; text-decoration: none; font-weight: 500; padding-block: 6px; }
+.progress { display: flex; flex-direction: column; gap: 8px; }
+.bar { height: 8px; background: var(--line); border-radius: 999px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s ease; }
+.progress-text { font-size: var(--s-1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.banner {
+  padding: 14px 16px; border: 1.5px dashed var(--slot-line); border-radius: var(--r);
+  background: var(--slot); color: var(--muted); font-size: var(--s-1);
+}
+
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.step summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px; min-height: 56px;
+}
+.step summary::-webkit-details-marker { display: none; }
+.num {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 2px solid var(--accent); color: var(--accent);
+  font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.done .num { background: var(--accent); color: var(--accent-ink); }
+.step-title { font-weight: 600; font-size: var(--s1); line-height: 1.3; min-width: 0; }
+.done .step-title { color: var(--muted); }
+.chev { margin-inline-start: auto; color: var(--muted); transition: transform 0.2s ease; flex: none; }
+details[open] > summary .chev { transform: rotate(180deg); }
+
+.step-body { padding: 0 16px 18px; padding-inline-start: 64px; display: flex; flex-direction: column; gap: 14px; }
+@media (max-width: 480px) { .step-body { padding-inline-start: 16px; } }
+.why { margin: 0; color: var(--muted); }
+.todo { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 4px; }
+
+.note {
+  background: var(--note); color: var(--note-ink);
+  border: 1px solid var(--note-line); border-radius: 4px;
+  padding: 12px 14px; transform: rotate(-0.4deg);
+}
+.note small { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; opacity: 0.85; }
+.note p { margin: 2px 0 0; font-size: var(--s1); line-height: 1.45; font-weight: 500; }
+
+.where { font-size: var(--s-1); color: var(--muted); margin: 0; }
+.where b { color: var(--ink); font-weight: 600; }
+.slot {
+  border: 1.5px dashed var(--slot-line); background: var(--slot); color: var(--muted);
+  border-radius: 8px; padding: 10px 12px; font-size: var(--s-1);
+}
+.sched-wrap { overflow-x: auto; }
+.sched { width: 100%; border-collapse: collapse; font-size: var(--s-1); }
+.sched td { padding: 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.sched td:last-child { text-align: left; color: var(--muted); white-space: nowrap; padding-inline-start: 12px; font-variant-numeric: tabular-nums; }
+
+.check { display: flex; align-items: center; gap: 10px; font-weight: 500; cursor: pointer; min-height: 44px; align-self: flex-start; }
+.check input { width: 22px; height: 22px; accent-color: var(--accent); margin: 0; }
+
+.later { border-top: 1px solid var(--line); padding-top: 6px; }
+.later > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding-block: 12px; min-height: 44px; flex-wrap: wrap;
+}
+.later > summary::-webkit-details-marker { display: none; }
+.later-sub { color: var(--muted); font-size: var(--s-1); flex-basis: 100%; }
+.later-list { list-style: none; margin: 0; padding: 0 0 8px; display: flex; flex-direction: column; gap: 14px; }
+.later-list b { display: block; }
+.later-list span { color: var(--muted); }
+
+.stuck { display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: var(--r); background: var(--accent-soft); }
+.stuck ul { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+
+footer { font-size: var(--s-1); color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+  .note { transform: none; }
+}
+</style>
+
+<div class="wrap" dir="rtl" lang="he">
+  <div class="brand"><b>הצעד הבא</b><span>מה עושים אחרי אבחנה, לפי הסדר</span></div>
+  <main id="app"></main>
+  <footer>מידע כללי שלא מחליף רופא. סכומים ותנאים משתנים, אז בודקים מול הקופה. עודכן בנובמבר 2026.</footer>
+</div>
+
+<script>
+// ---------- Content ----------
+// Each condition is either "ready" (full content) or uses the shared skeleton.
+// A "slot" marks disease-specific content that hasn't been written yet.
+
+const SKELETON_STEPS = [
+  {
+    id: "gp",
+    title: "לקבוע תור לרופא המשפחה",
+    why: "הוא מנהל את הטיפול ומפנה לכל השאר.",
+    todo: [
+      "להביא רשימה של כל התרופות שנלקחות היום",
+      "להביא תוצאות בדיקות אחרונות, אם יש",
+      "לרשום מראש 3 שאלות שהכי מטרידות"
+    ],
+    say: "קיבלנו אבחנה. מה תוכנית הטיפול, ולאיזה מומחה צריך הפניה?",
+    where: "רופא המשפחה בקופה"
+  },
+  {
+    id: "chronic",
+    title: "לבקש הכרה כחולה כרוני",
+    why: "מעל תקרה רבעונית (בין 1,100 ל-1,300 ₪ בערך, לפי הקופה) לא משלמים יותר על תרופות שבסל. ההכרה לא תמיד אוטומטית.",
+    todo: [
+      "לפנות למוקד הקופה או דרך האפליקציה שלה",
+      "לוודא שכל התרופות הקבועות רשומות כקבועות"
+    ],
+    say: "אני רוצה הכרה כחולה כרוני, כדי לקבל תקרת תשלום על תרופות.",
+    where: "מוקד הקופה או אפליקציית הקופה"
+  },
+  {
+    id: "specialist",
+    title: "להגיע למומחה",
+    why: "בהפניה מרופא המשפחה. לתור בבית חולים או במרפאה חיצונית צריך גם טופס 17, שזו ההתחייבות של הקופה לשלם.",
+    todo: [
+      "לבקש הפניה",
+      "אם התור בבית חולים: לבקש טופס 17 לפני התור"
+    ],
+    slot: "איזה מומחה, ואיזה צוות נוסף (אחות, דיאטנית, פיזיותרפיה) מקובל במחלה הזו",
+    say: "אני צריך טופס 17 לתור הזה.",
+    where: "רופא המשפחה, מוקד הקופה"
+  },
+  {
+    id: "meds",
+    title: "לסדר תרופות",
+    why: "לפני כל תרופה חדשה כדאי לדעת אם היא בסל, ובאילו תנאים.",
+    todo: [
+      "לשאול על כל תרופה חדשה אם היא בסל"
+    ],
+    slot: "אילו תרופות ומכשור נפוצים במחלה הזו, ומה מהם בסל",
+    say: "האם התרופה הזו בסל? ואם לא, יש חלופה שכן?",
+    where: "הרופא, בית המרקחת של הקופה"
+  },
+  {
+    id: "checks",
+    title: "לשים ביומן את המעקב הקבוע",
+    why: "בדיקות קבועות תופסות בעיות מוקדם, לפני שהן כואבות.",
+    todo: [
+      "לקבוע את הבדיקה הבאה כבר ביציאה מהתור"
+    ],
+    slot: "אילו בדיקות קבועות צריך, וכל כמה זמן",
+    say: "מתי הבדיקה הבאה, ואפשר לקבוע אותה עכשיו?",
+    where: "רופא המשפחה או המומחה"
+  },
+  {
+    id: "support",
+    title: "למצוא תמיכה",
+    why: "עמותת החולים של המחלה מכירה את הקיצורים שאף אחד לא כותב.",
+    todo: [
+      "לבקש מהאחות או מהעובדת הסוציאלית שם של עמותה"
+    ],
+    slot: "עמותת החולים והקו התומך של המחלה הזו",
+    say: "יש עמותה או קבוצת תמיכה שאתם ממליצים עליה?",
+    where: "האחות, העובדת הסוציאלית בקופה"
+  }
+];
+
+const SKELETON_LATER = [
+  { title: "ביטוח משלים", text: "בודקים מה הוא נותן במחלה הזו, מעבר לסל." },
+  { title: "תרופה שלא בסל", text: "מבקשים מהרופא להגיש בקשה לוועדת חריגים בקופה." },
+  { title: "ביטוח לאומי", text: "נכות כללית, ניידות ושירותים מיוחדים, לפי המצב.", slot: "אילו גמלאות רלוונטיות למחלה הזו" },
+  { title: "מס הכנסה", text: "פטור רק מ-90% נכות ומעלה." },
+  { title: "ביטוחים פרטיים", text: "את כל הפוליסות הקיימות רואים במקום אחד, באתר הר הביטוח." }
+];
+
+const DIABETES_STEPS = [
+  {
+    id: "gp",
+    title: "לקבוע תור לרופא המשפחה",
+    why: "הוא מנהל את כל הטיפול ומפנה לכל השאר.",
+    todo: [
+      "להביא רשימה של כל התרופות שנלקחות היום",
+      "להביא תוצאות בדיקות דם אחרונות, אם יש",
+      "לרשום מראש 3 שאלות שהכי מטרידות"
+    ],
+    say: "אובחנה סוכרת. אני רוצה תוכנית מעקב והפניה למרפאת סוכרת.",
+    where: "רופא המשפחה בקופה"
+  },
+  {
+    id: "chronic",
+    title: "לבקש הכרה כחולה כרוני",
+    why: "מעל תקרה רבעונית (בין 1,100 ל-1,300 ₪ בערך, לפי הקופה) לא משלמים יותר על תרופות שבסל. ההכרה לא תמיד אוטומטית.",
+    todo: [
+      "לפנות למוקד הקופה או דרך האפליקציה שלה",
+      "לוודא שכל תרופות הסוכרת רשומות כקבועות"
+    ],
+    say: "אני רוצה הכרה כחולה כרוני, כדי לקבל תקרת תשלום על תרופות.",
+    where: "מוקד הקופה או אפליקציית הקופה"
+  },
+  {
+    id: "team",
+    title: "להכיר את צוות הסוכרת",
+    why: "אחות סוכרת ודיאטנית מלמדות את מה שלרופא אין זמן ללמד: איך מודדים, מה אוכלים, ומה עושים כשהסוכר נמוך.",
+    todo: [
+      "לקבוע תור לאחות סוכרת",
+      "לקבוע תור לדיאטנית",
+      "לשאול אם יש בקופה סדנה לחולי סוכרת"
+    ],
+    say: "אני רוצה הפניה לאחות סוכרת ולדיאטנית.",
+    where: "מרפאת הסוכרת בקופה"
+  },
+  {
+    id: "meds",
+    title: "לסדר תרופות ומד סוכר",
+    why: "רוב תרופות הסוכרת בסל. מד סוכר ורצועות מקבלים דרך הקופה.",
+    todo: [
+      "לשאול על כל תרופה חדשה אם היא בסל, ובאילו תנאים",
+      "לקבל מד סוכר ולתרגל מדידה עם האחות",
+      "בסוכרת סוג 1: לשאול על חיישן רציף. הוא בסל בתנאים מסוימים, בהמלצת מומחה"
+    ],
+    say: "האם התרופה הזו בסל? ואם לא, יש חלופה שכן?",
+    where: "הרופא, בית המרקחת של הקופה"
+  },
+  {
+    id: "checks",
+    title: "לשים ביומן את הבדיקות הקבועות",
+    why: "סוכרת לא כואבת עד שמאוחר. הבדיקות הקבועות תופסות בעיות מוקדם.",
+    schedule: [
+      ["בדיקת HbA1c (ממוצע הסוכר)", "כל 3 עד 6 חודשים"],
+      ["בדיקת עיניים (קרקעית העין)", "פעם בשנה"],
+      ["בדיקת כפות הרגליים", "פעם בשנה"],
+      ["תפקודי כליה ובדיקת שתן", "פעם בשנה"],
+      ["שומנים בדם", "פעם בשנה"],
+      ["לחץ דם", "בכל ביקור"]
+    ],
+    say: "מתי הבדיקה הבאה שלי, ואפשר לקבוע אותה כבר עכשיו?",
+    where: "רופא המשפחה"
+  },
+  {
+    id: "drive",
+    title: "לבדוק את רישיון הנהיגה",
+    why: "חולי סוכרת יכולים לנהוג ברכב פרטי באישור המכון הרפואי לבטיחות בדרכים. מי שמטופל באינסולין לא יכול לקבל רישיון לרכב ציבורי או לרכב כבד מקצועי.",
+    todo: [
+      "לשאול את הרופא אם הטיפול הנוכחי מחייב דיווח",
+      "אם מתחילים אינסולין: לשאול שוב"
+    ],
+    say: "האם הטיפול שלי מחייב דיווח למכון הרפואי לבטיחות בדרכים?",
+    where: "רופא המשפחה"
+  }
+];
+
+const DIABETES_LATER = [
+  { title: "ביטוח משלים", text: "בודקים מה הוא נותן לסוכרת: חיישנים, עוד פגישות עם דיאטנית, תרופות שלא בסל." },
+  { title: "תרופה שלא בסל", text: "מבקשים מהרופא להגיש בקשה לוועדת חריגים בקופה." },
+  { title: "ביטוח לאומי", text: "נכות כללית, ובסיבוכים ברגליים גם קצבת ניידות. רלוונטי בעיקר כשיש סיבוכים." },
+  { title: "מס הכנסה", text: "פטור רק מ-90% נכות ומעלה." },
+  { title: "ביטוחים פרטיים", text: "ביטוח אובדן כושר עבודה עשוי לשלם קצבה. את כל הפוליסות רואים באתר הר הביטוח." }
+];
+
+const CONDITIONS = {
+  diabetes: {
+    name: "סוכרת", sub: "סוג 1 או סוג 2, אבחנה חדשה או קיימת", ready: true,
+    steps: DIABETES_STEPS, later: DIABETES_LATER,
+    guide: { label: "פורטל הסוכרת של כל זכות", href: "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA" }
+  },
+  heart: { name: "לב ולחץ דם", sub: "יתר לחץ דם, אי ספיקת לב, אחרי התקף" },
+  cancer: { name: "סרטן", sub: "מהאבחנה ועד תחילת הטיפול" },
+  dementia: { name: "דמנציה", sub: "אלצהיימר וירידה בזיכרון" },
+  other: { name: "מחלה אחרת", sub: "השלבים הכלליים שמתאימים לרוב המחלות הכרוניות", wide: true }
+};
+
+// ---------- State (per viewer, optional) ----------
+function loadDone(id) {
+  try { return new Set(JSON.parse(localStorage.getItem("hatzad:" + id) || "[]")); }
+  catch (e) { return new Set(); }
+}
+function saveDone(id, set) {
+  try { localStorage.setItem("hatzad:" + id, JSON.stringify([...set])); } catch (e) {}
+}
+
+// ---------- Render ----------
+const app = document.getElementById("app");
+
+function renderHome() {
+  const tiles = Object.entries(CONDITIONS).map(([id, c]) => `
+    <a class="tile${c.wide ? " wide" : ""}" href="#${id}">
+      <span class="tile-name">${c.name}</span>
+      <span class="tile-sub">${c.sub}</span>
+      <span class="pill${c.ready ? "" : " muted"}">${c.ready ? "מדריך מלא" : "שלד כללי"}</span>
+    </a>`).join("");
+  app.innerHTML = `
+    <div class="wrap-inner" style="display:flex;flex-direction:column;gap:24px">
+      <div class="intro">
+        <h1>מה האבחנה?</h1>
+        <p class="lede">בוחרים, ומקבלים את מה שעושים, לפי הסדר. לכל צעד יש משפט מוכן להגיד בקופה. כסף וביטוחים מחכים בסוף.</p>
+      </div>
+      <nav class="tiles" aria-label="בחירת אבחנה">${tiles}</nav>
+    </div>`;
+}
+
+function stepHTML(s, i, isDone, isOpen) {
+  const todo = s.todo ? `<ul class="todo">${s.todo.map(t => `<li>${t}</li>`).join("")}</ul>` : "";
+  const sched = s.schedule ? `<div class="sched-wrap"><table class="sched"><tbody>${
+    s.schedule.map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join("")
+  }</tbody></table></div>` : "";
+  const slot = s.slot ? `<div class="slot">כאן ייכנס: ${s.slot}</div>` : "";
+  return `
+    <li>
+      <details class="step${isDone ? " done" : ""}" data-step="${s.id}"${isOpen ? " open" : ""}>
+        <summary>
+          <span class="num" aria-hidden="true">${isDone ? "✓" : i + 1}</span>
+          <span class="step-title">${s.title}</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </summary>
+        <div class="step-body">
+          <p class="why">${s.why}</p>
+          ${todo}${sched}${slot}
+          <div class="note"><small>מה להגיד</small><p>"${s.say}"</p></div>
+          <p class="where">איפה: <b>${s.where}</b></p>
+          <label class="check"><input type="checkbox" id="done-${s.id}" data-step="${s.id}"${isDone ? " checked" : ""}> עשיתי את זה</label>
+        </div>
+      </details>
+    </li>`;
+}
+
+function renderPath(id) {
+  const c = CONDITIONS[id];
+  const steps = c.ready ? c.steps : SKELETON_STEPS;
+  const later = c.ready ? c.later : SKELETON_LATER;
+  const done = loadDone(id);
+  const firstOpen = steps.findIndex(s => !done.has(s.id));
+
+  const laterItems = later.map(l => `
+    <li><b>${l.title}</b><span>${l.text}</span>${l.slot ? `<div class="slot" style="margin-top:6px">כאן ייכנס: ${l.slot}</div>` : ""}</li>`).join("");
+
+  const guide = c.guide
+    ? `<li>מדריך מלא בכתב: <a href="${c.guide.href}" target="_blank" rel="noopener">${c.guide.label}</a></li>`
+    : `<li>מדריך מלא בכתב: <a href="https://www.kolzchut.org.il" target="_blank" rel="noopener">כל זכות</a></li>`;
+
+  app.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <a class="back" href="#">→ כל האבחנות</a>
+      <div class="intro">
+        <h1>${c.name}</h1>
+        <div class="progress">
+          <div class="bar"><i id="bar"></i></div>
+          <span class="progress-text" id="progress-text"></span>
+        </div>
+      </div>
+      ${c.ready ? "" : `<div class="banner">זה השלד הכללי. התוכן הספציפי ל${c.name} עוד לא נכתב, והמקומות שלו מסומנים במסגרת מקווקוות.</div>`}
+      <ol class="steps">${steps.map((s, i) => stepHTML(s, i, done.has(s.id), i === firstOpen)).join("")}</ol>
+      <details class="later">
+        <summary>
+          <h2>כסף, ביטוחים וזכויות</h2>
+          <span class="pill muted">אחר כך</span>
+          <span class="later-sub">לא דחוף. חוזרים לזה אחרי שהטיפול מסודר.</span>
+        </summary>
+        <ul class="later-list">${laterItems}</ul>
+      </details>
+      <section class="stuck" aria-labelledby="stuck-h">
+        <h2 id="stuck-h">נתקעתם?</h2>
+        <ul>
+          <li>הקופה מסרבת למשהו שמגיע לכם: נציבות קבילות בריאות, דרך אתר משרד הבריאות</li>
+          <li>שאלות על זכויות של אזרח ותיק: מוקד <bdi dir="ltr">*8840</bdi></li>
+          ${guide}
+        </ul>
+      </section>
+    </div>`;
+
+  updateProgress(id, steps, done);
+
+  app.querySelectorAll('input[type="checkbox"][data-step]').forEach(box => {
+    box.addEventListener("change", () => {
+      const stepId = box.dataset.step;
+      const det = box.closest("details");
+      if (box.checked) done.add(stepId); else done.delete(stepId);
+      saveDone(id, done);
+      det.classList.toggle("done", box.checked);
+      const idx = steps.findIndex(s => s.id === stepId);
+      det.querySelector(".num").textContent = box.checked ? "✓" : String(idx + 1);
+      if (box.checked) {
+        det.open = false;
+        const next = steps.find(s => !done.has(s.id));
+        if (next) app.querySelector(`details[data-step="${next.id}"]`).open = true;
+      }
+      updateProgress(id, steps, done);
+    });
+  });
+}
+
+function updateProgress(id, steps, done) {
+  const count = steps.filter(s => done.has(s.id)).length;
+  const bar = document.getElementById("bar");
+  const text = document.getElementById("progress-text");
+  if (bar) bar.style.width = Math.round((count / steps.length) * 100) + "%";
+  if (text) text.textContent = count === steps.length
+    ? `כל ${steps.length} הצעדים בוצעו`
+    : `בוצעו ${count} מתוך ${steps.length} צעדים`;
+}
+
+function route() {
+  const id = location.hash.slice(1);
+  if (CONDITIONS[id]) renderPath(id); else renderHome();
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
