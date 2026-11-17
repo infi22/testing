@@ -30,82 +30,99 @@ Built today and reported green (codex clean, smoke 52 screens, symptoms 146/146,
 4. `tusk save`: `LATER.md` and `deck/deck-data.js` still say 45 paths. It is 47.
 5. Merge `main` into `guide-color`.
 6. Veto or approve the D46 drafts: the four Guide notes, the intro, the scene line "לא אשמים, ולא לבד."
-7. Only then start the off-grid cards (section 4).
+7. Only then build the wasteland tips (sections 3 and 4) into the app.
 
-## 3. The rule you must change before the cards can ship
+## 3. Wasteland rules (the owner's decision, 17.11.2026)
 
-Your request today: actions the person does alone, not a referral. Two standing decisions in `CLAUDE.md` forbid that:
+Decided by the owner on 17.11.2026. No further approval needed. Add it to `CLAUDE.md` next to the first-aid rule:
 
-- 9.11.2026: "An immediate solution is always a referral (101, ER, ער״ן) and never treatment."
-- 11.11.2026: first-aid lines only as word-for-word Ministry of Health or MDA quotes. "The app adds no first-aid advice of its own."
+> **Wasteland rules (the owner's decision, 17.11.2026).** When a person is alone, far from help, with no reception or a dead phone, "call 101" is not an answer. For that situation the app gives the tips themselves: what to do with your own hands, in order. Israeli official lines are not required here, because they all assume a phone. The source is wilderness medicine guidelines (WHO for viper bites, Wilderness Medical Society, AHA / Red Cross, ILCOR). The 9.11 "never treatment" rule and the 11.11 "Ministry or MDA quotes only" rule stay in force everywhere else in the app.
 
-Proposed new exception, for you to accept, edit or reject:
+What the decision does not settle, because it is a fact and not a rule:
 
-> **Off-grid first aid (owner's decision, date).** When there is no reception and help is far, a card may show first actions. Each line is either a word-for-word Ministry of Health or MDA quote, or, where no Israeli official line exists, a line from a graded international guideline (WHO, ILCOR, Wilderness Medical Society), with the source named in the same sentence. Where sources disagree, the card says so. Every card ends with how to reach help.
+- **A dead phone means a dead app.** These tips must be read before the trip. Build them as a "לפני שיוצאים לשטח" screen that also prints or saves well, not as an emergency screen.
+- **The tips below are from my knowledge of the guidelines.** The cloud could not open the guideline texts. Check each tip against the reading list in 5c when you build. Where a tip is shaky, it says so.
+- The app text is Hebrew. These are the English working lines; write the Hebrew at build time, short and plain.
 
-Two more decisions that come before the writing:
+## 4. The wasteland tips
 
-- **Offline.** With no network the app does not open. Either the app is saved to the phone in advance, or the cards are "read before the trip" content. Pick one.
-- **Calm rule.** These cards are urgent by nature. They need to fit "no alarm boxes, no red but 101".
+The frame for all five: **you are alone, far from a road, and the phone is dead or has no signal.**
 
-## 4. The five cards: first draft
+### 4.1 Snake bite
 
-**Status: every line below is ❓ (my general knowledge, no source opened).** Two research helpers were reading the official pages when this was written. Their quotes go in section 5. Do not put any line in the app until it has a source.
+1. **Step back from the snake and sit for a minute.** Panic and running do more harm than that minute costs.
+2. **Take off rings, watch and anything tight on that limb now.** Swelling comes fast.
+3. **Note the time of the bite.** Doctors will ask.
+4. **Leave the bite alone.** No cutting, no sucking, no tourniquet, no ice. None of them help, and several cause damage.
+5. **Then walk out.** Nothing in the field treats venom. Only antivenom does, and it is in a hospital. If no one knows where you are, waiting is the worse bet.
+6. **Walk smart, not fast.** Steady pace, the shortest way to a road or people, rests in shade, small sips of water. Bitten on the hand: keep the arm still against the body.
+7. **Stay findable.** Keep to the marked trail and head toward where people pass.
 
-Card shape: **Do now** / **Don't** / **Reach help** / **Before the trip**.
+- **The one judgment call:** if someone knows your route and return hour, staying put near the trail can beat walking on a bitten leg.
+- **Pain:** paracetamol only. Not aspirin, not ibuprofen: they raise the bleeding risk. (From memory of the WHO guideline; check.)
+- **Good to know:** Israel has no rattlesnakes. The dangerous ones are vipers: the tzefa, and the saw-scaled viper in the desert. Snakes do not chase. Most bites happen when a hand or foot goes where the eyes did not.
+- **Shaky:** splint or not. The sources split (section 5a). "Keep it still" is the part they all agree on, so that is the tip.
 
-### Card 1. No signal: how to call
+### 4.2 Heavy bleeding
 
-- **Do now:** dial 112 even with no bars; it may connect through another carrier's network. Try a text message; it needs less signal than a call. Move to higher, open ground and try again.
-- **Do now:** newer phones have a satellite SOS. Whether it works in Israel is not verified.
-- **Do now:** save battery: low-power mode, screen dim, stop searching between tries.
-- **Don't:** leave the marked trail to hunt for signal in the dark.
-- **Reach help:** stay on the trail where rescuers will look. Three whistle blasts or three flashes is the distress sign.
-- **Before the trip:** tell someone the route and the return hour. Download the map.
-- **Open:** does 112 or 101 work in Israel without your carrier or without a SIM. The rescue units' numbers.
+1. **Press hard, straight on the wound,** with any cloth and your full weight. Do not lift to look.
+2. **Blood comes through:** add cloth on top and keep pressing.
+3. **Free your hands:** tie a cloth strip tightly over the wad, so the pressure stays while you move.
+4. **Arm or leg, and it still pours:** tourniquet. A wide strip of cloth, above the wound, not on a joint. Twist it with a stick until the bleeding stops. Note the time. Do not loosen it.
+5. **Something stuck in the wound:** leave it in. Press around it.
+6. **Then get out,** the same way as 4.1: steady, shortest way, findable.
 
-### Card 2. Snake bite
+- **Before the trip:** a real tourniquet and a pressure bandage weigh nothing. An improvised one works much worse.
+- **Shaky:** nothing. This is the best-supported card of the five.
 
-- **Do now:** move away from the snake. Sit. Stay as still and calm as you can.
-- **Do now:** take off rings, watch, bracelets and tight shoes before the swelling starts.
-- **Do now:** note the time of the bite. Remember how the snake looked; a photo from a distance if safe.
-- **Don't:** cut, suck, tie a tourniquet, put ice, drink alcohol, chase the snake.
-- **Don't:** take aspirin or ibuprofen.
-- **Reach help:** there is no field treatment. Only antivenom works, and it is in a hospital. With a partner: the partner goes for signal or help, you stay. Alone and nobody knows where you are: walk out slowly rather than wait.
-- **Open:** splint the limb or not (the conflict in section 2, item 3). Limb height. Official wording on walk versus stay.
-- Already in the app as MDA quotes (D25.2, D25.3): full rest and calming, remove clothes and jewellery from the limb, don't cut, don't suck, no tourniquet, no food or drink, don't chase the snake.
+### 4.3 Heat
 
-### Card 3. Heavy bleeding
+Heat is the bigger killer of hikers than any snake. Alone, the rule is: **act at the first signs, because later you will not be able to think.**
 
-- **Do now:** press hard, straight on the wound, with a cloth and both hands. Don't lift to look.
-- **Do now:** blood comes through: add cloth on top and keep pressing.
-- **Do now:** arm or leg, and pressure fails: a tourniquet above the wound, tightened until the bleeding stops. Note the time. Don't loosen it.
-- **Don't:** pull out an object stuck in the wound. Press around it.
-- **Reach help:** keep the pressure on while moving or waiting.
-- **Before the trip:** a real tourniquet and a pressure bandage in the bag. An improvised one works worse.
-- **Open:** MDA's exact wording on tourniquets for the public.
+- **First signs:** headache, dizziness, nausea, cramps, unusual tiredness.
 
-### Card 4. Heat stroke
+1. **Stop walking. Now, not at the next ridge.**
+2. **Shade.** Any: a rock, a wadi wall, a shirt stretched over a bush.
+3. **Wet your clothes and head** with some of the water, and fan yourself. Evaporation is what cools.
+4. **Drink in small sips.** Add salt or a salty snack if you have one.
+5. **Stay until the sun is low.** Walk out in the evening or at dawn, not at noon.
 
-Probably the most important card: heat, not snakes, is what kills hikers in Israel. (❓ needs a figure and a source.)
+- **With a partner who is confused, stumbling or passes out:** that is heat stroke. Cool first, move second. Strip extra clothes, pour water over the whole body and fan hard. If there is a pool or stream, put the body in with the head out. No drink to someone who is not fully awake. No fever pills: they do nothing here.
+- **Before the trip:** about one litre of water per person per hour of walking, start early, and turn back when half the water is gone.
+- **Shaky:** the Ministry of Health says no drink at all in heat stroke. The tip above gives drink only to a person who is fully awake.
 
-- **Signs:** confusion, strange behaviour, collapse, very hot body.
-- **Do now:** stop. Shade. Take off extra clothes.
-- **Do now:** cool hard and at once: pour water over the body and fan. A stream or pool: put the body in, head out. Cool first, move second.
-- **Do now:** drink only if fully awake and able to swallow.
-- **Don't:** keep walking "just to the car". Don't give fever medicine.
-- **Reach help:** send someone for signal while the cooling goes on.
-- **Before the trip:** water amount per person per hour. Official figure still to find.
+### 4.4 Severe allergic reaction
 
-### Card 5. Severe allergic reaction
+- **Signs, minutes after a sting or food:** hard to breathe, throat or face swelling, rash all over, faintness.
 
-- **Signs:** trouble breathing, swelling of face or throat, rash all over, faintness, after a sting or food.
-- **Do now:** adrenaline auto-injector into the outer thigh, at once, through clothes if needed.
-- **Do now:** lie down, legs up. Hard to breathe: sit up. Don't stand or walk.
-- **Do now:** no improvement after about 5 minutes: second injector if there is one. (Exact timing to verify.)
-- **Don't:** rely on an antihistamine pill instead of the injector.
-- **Reach help:** hospital is needed even if it passes; it can come back.
-- **Before the trip:** a known allergy means two injectors and a partner who knows how to use them.
+1. **Adrenaline injector into the outer thigh, at once.** Through trousers is fine. Do not wait to see if it gets worse.
+2. **Lie down with legs raised.** If breathing is hard, sit up instead. Do not stand up fast and do not walk yet.
+3. **Not better after several minutes:** use the second injector if you have one.
+4. **Bee sting:** scrape the stinger off quickly with a nail or card.
+5. **No injector:** lie down, legs up, take an antihistamine if you carry one, and stay still until it eases. A pill is not a replacement, only all there is.
+6. **When it has passed, get out anyway.** The reaction can come back hours later.
+
+- **Before the trip:** a known allergy means two injectors, in date, in the bag's top pocket.
+- **Shaky:** the exact wait before the second injector. The 2025 international review leaves the interval open.
+
+### 4.5 Dead phone, no signal: being found
+
+Before the trip, which is where this card does its real work:
+
+1. **Tell one person the route and the return hour.** This is the single most valuable line in this file. It turns "nobody knows" into "someone will send help tonight".
+2. **Download the map.** Carry a power bank and a whistle.
+3. **Leave the phone on low power, and off in long stretches with no signal.** Searching for a network drains it.
+
+In the field:
+
+1. **No bars:** try 112 anyway, then try again from higher, open ground. It may connect through another network. It may also not. Do not burn the battery on it.
+2. **A text needs less signal than a call.** Write where you are and what happened, send it to the person who knows your route, and let the phone keep trying.
+3. **Stay on the marked trail.** Searchers follow trails first.
+4. **Signal in threes:** three whistle blasts, three flashes, three shouts. A bright cloth in the open by day.
+5. **Night:** stop. Do not walk cliffs or wadis in the dark. Cold, not thirst, is the night's problem: wind shelter and every layer on.
+6. **Injured and cannot walk:** make yourself visible from above and from the trail, and save water.
+
+- **Shaky:** almost everything about 112. No official Israeli page says what works without your carrier or without a SIM, and the European emergency-number body reports failures. So the tip is "try", never "it works".
 
 ## 5. Research findings
 
@@ -152,7 +169,7 @@ Probably the most important card: heat, not snakes, is what kills hikers in Isra
 - Bleeding, tourniquet, fracture, sprain.
 - Allergy with no auto-injector.
 
-**What this changes in the draft cards (section 4)**
+**What this changed in the tips (section 4)**
 
 - Card 2: the Ministry's line puts the limb **below heart level** and still. "Take off jewellery" is confirmed as a lead from two sources.
 - Card 4: the Ministry says **no drink** in heat stroke. My draft said "drink only if fully awake". The Ministry's line is the stricter one; use it, and keep sipping water for heat exhaustion only.
@@ -212,7 +229,7 @@ Do it on the PC, where the web is open. Open in this order:
 5. WMS heat illness 2024.
 6. ILCOR 2025 and ERC 2025 first aid.
 
-## 5d. Honest state of the five cards
+### 5d. How well each card is backed
 
 | Card | Israeli official line | International | Verdict |
 |---|---|---|---|
