@@ -41,88 +41,92 @@ Decided by the owner on 17.11.2026. No further approval needed. Add it to `CLAUD
 What the decision does not settle, because it is a fact and not a rule:
 
 - **A dead phone means a dead app.** These tips must be read before the trip. Build them as a "לפני שיוצאים לשטח" screen that also prints or saves well, not as an emergency screen.
-- **The tips below are from my knowledge of the guidelines.** The cloud could not open the guideline texts. Check each tip against the reading list in 5c when you build. Where a tip is shaky, it says so.
+- **The tips below are from memory of the guidelines, not from their text.** The cloud could not open a single guideline. Each tip is marked [G] or [J]; see the key at the top of section 4. Nothing ships before it is checked against the reading list in 5c.
 - The app text is Hebrew. These are the English working lines; write the Hebrew at build time, short and plain.
 
 ## 4. The wasteland tips
 
 The frame for all five: **you are alone, far from a road, and the phone is dead or has no signal.**
 
+**How to read the marks. Nothing here was checked against a source text from the cloud session.**
+
+- **[G]** I remember this as standard in the major first-aid guidelines (WHO, AHA / Red Cross, CDC, Wilderness Medical Society, allergy societies). Memory, not a quote. Confirm against the reading list in 5c before it ships.
+- **[J]** My own judgment. No guideline line behind it that I know of. Ship it only if a doctor or paramedic agrees, or drop it.
+
+Second pass, 17.11.2026: lines I could not stand behind were removed. They are listed in 4.6 so nobody adds them back by accident.
+
 ### 4.1 Snake bite
 
-1. **Step back from the snake and sit for a minute.** Panic and running do more harm than that minute costs.
-2. **Take off rings, watch and anything tight on that limb now.** Swelling comes fast.
-3. **Note the time of the bite.** Doctors will ask.
-4. **Leave the bite alone.** No cutting, no sucking, no tourniquet, no ice. None of them help, and several cause damage.
-5. **Then walk out.** Nothing in the field treats venom. Only antivenom does, and it is in a hospital. If no one knows where you are, waiting is the worse bet.
-6. **Walk smart, not fast.** Steady pace, the shortest way to a road or people, rests in shade, small sips of water. Bitten on the hand: keep the arm still against the body.
-7. **Stay findable.** Keep to the marked trail and head toward where people pass.
+1. **[G]** Move away from the snake. Sit down and calm yourself. Keep the bitten limb as still as you can.
+2. **[G]** Take off rings, watch and anything tight on that limb, before the swelling starts.
+3. **[G]** Note the time of the bite.
+4. **[G]** Do not cut the bite, suck it, tie a tourniquet or put ice on it. No alcohol.
+5. **[G]** Do not try to catch or kill the snake. Remember how it looked.
+6. **[G]** The only treatment is antivenom, in a hospital. First aid must not delay getting there.
+7. **[J]** Alone, and nobody knows where you are: walk out, at a steady pace, by the shortest way to a road or people. The guidelines say "avoid exertion" and "do not delay care"; for a lone person those two collide, and no guideline I know rules on it.
+8. **[J]** If someone knows your route and return hour, staying put near the trail may be the better choice.
 
-- **The one judgment call:** if someone knows your route and return hour, staying put near the trail can beat walking on a bitten leg.
-- **Pain:** paracetamol only. Not aspirin, not ibuprofen: they raise the bleeding risk. (From memory of the WHO guideline; check.)
-- **Good to know:** Israel has no rattlesnakes. The dangerous ones are vipers: the tzefa, and the saw-scaled viper in the desert. Snakes do not chase. Most bites happen when a hand or foot goes where the eyes did not.
-- **Shaky:** splint or not. The sources split (section 5a). "Keep it still" is the part they all agree on, so that is the tip.
+- **[G]** Pain: paracetamol, not aspirin or ibuprofen. From memory of the WHO South-East Asia guideline; this one needs checking first.
+- **Open, do not write a tip yet:** splint or not (sources split, 5a). Limb height (heart level or below; sources split). Drinking: MDA says no food or drink, which nobody has squared with a walk of hours in a desert.
 
 ### 4.2 Heavy bleeding
 
-1. **Press hard, straight on the wound,** with any cloth and your full weight. Do not lift to look.
-2. **Blood comes through:** add cloth on top and keep pressing.
-3. **Free your hands:** tie a cloth strip tightly over the wad, so the pressure stays while you move.
-4. **Arm or leg, and it still pours:** tourniquet. A wide strip of cloth, above the wound, not on a joint. Twist it with a stick until the bleeding stops. Note the time. Do not loosen it.
-5. **Something stuck in the wound:** leave it in. Press around it.
-6. **Then get out,** the same way as 4.1: steady, shortest way, findable.
-
-- **Before the trip:** a real tourniquet and a pressure bandage weigh nothing. An improvised one works much worse.
-- **Shaky:** nothing. This is the best-supported card of the five.
+1. **[G]** Press hard, straight on the wound, with any cloth. Do not lift to look.
+2. **[G]** Blood comes through: add cloth on top and keep pressing.
+3. **[G]** An object stuck in the wound stays in. Press around it.
+4. **[G]** Arm or leg, life-threatening, and pressure does not stop it: tourniquet above the wound, tightened until the bleeding stops. Note the time. Do not loosen it.
+5. **[G]** A manufactured tourniquet works much better than an improvised one. Carry one.
+6. **[J]** Alone, tie a cloth strip tightly over the wad so the pressure stays while you move.
+7. **[J]** No manufactured tourniquet: a wide strip of cloth twisted tight with a stick, not on a joint. This is the usual improvised method, but its failure rate is high.
 
 ### 4.3 Heat
 
-Heat is the bigger killer of hikers than any snake. Alone, the rule is: **act at the first signs, because later you will not be able to think.**
+- **[G]** Early signs: headache, dizziness, nausea, cramps, heavy tiredness.
 
-- **First signs:** headache, dizziness, nausea, cramps, unusual tiredness.
+1. **[G]** Stop the effort. Get into shade. Loosen or take off extra clothes.
+2. **[G]** Awake and able to swallow: drink.
+3. **[G]** Cool the body: wet the skin and clothes and fan.
+4. **[G]** Confusion, stumbling, strange behaviour or passing out, in a hot person, is heat stroke. Cool first, move second. The best method is putting the body in cold water; otherwise pour water over the whole body and fan.
+5. **[G]** Nothing by mouth to a person who is not fully awake. Fever pills do not help.
+6. **[J]** Alone, act at the first signs, because later you will not think clearly.
+7. **[J]** Wait in shade for the cool hours before walking on.
 
-1. **Stop walking. Now, not at the next ridge.**
-2. **Shade.** Any: a rock, a wadi wall, a shirt stretched over a bush.
-3. **Wet your clothes and head** with some of the water, and fan yourself. Evaporation is what cools.
-4. **Drink in small sips.** Add salt or a salty snack if you have one.
-5. **Stay until the sun is low.** Walk out in the evening or at dawn, not at noon.
-
-- **With a partner who is confused, stumbling or passes out:** that is heat stroke. Cool first, move second. Strip extra clothes, pour water over the whole body and fan hard. If there is a pool or stream, put the body in with the head out. No drink to someone who is not fully awake. No fever pills: they do nothing here.
-- **Before the trip:** about one litre of water per person per hour of walking, start early, and turn back when half the water is gone.
-- **Shaky:** the Ministry of Health says no drink at all in heat stroke. The tip above gives drink only to a person who is fully awake.
+- **Open:** in a desert the water for wetting clothes is the same water you drink. No source I know says how to split it. Israel's Ministry of Health appears to say no drink at all in heat stroke (5a).
 
 ### 4.4 Severe allergic reaction
 
-- **Signs, minutes after a sting or food:** hard to breathe, throat or face swelling, rash all over, faintness.
+- **[G]** Signs, within minutes of a sting or food: hard to breathe, swelling of throat or face, rash all over, faintness.
 
-1. **Adrenaline injector into the outer thigh, at once.** Through trousers is fine. Do not wait to see if it gets worse.
-2. **Lie down with legs raised.** If breathing is hard, sit up instead. Do not stand up fast and do not walk yet.
-3. **Not better after several minutes:** use the second injector if you have one.
-4. **Bee sting:** scrape the stinger off quickly with a nail or card.
-5. **No injector:** lie down, legs up, take an antihistamine if you carry one, and stay still until it eases. A pill is not a replacement, only all there is.
-6. **When it has passed, get out anyway.** The reaction can come back hours later.
-
-- **Before the trip:** a known allergy means two injectors, in date, in the bag's top pocket.
-- **Shaky:** the exact wait before the second injector. The 2025 international review leaves the interval open.
+1. **[G]** Adrenaline injector into the outer thigh, at once. Through clothes is fine.
+2. **[G]** Lie down with legs raised. If breathing is hard, sit up. Do not stand up or walk.
+3. **[G]** No improvement after several minutes: a second injector, if there is one. The exact wait differs between guidelines.
+4. **[G]** A bee stinger: get it out fast.
+5. **[G]** An antihistamine does not treat this. It is not a replacement for the injector.
+6. **[G]** Get to a hospital even if it passes. The reaction can return hours later.
+7. **[J]** No injector: lie down with legs raised and stay still. There is no field treatment I can honestly offer beyond that.
 
 ### 4.5 Dead phone, no signal: being found
 
-Before the trip, which is where this card does its real work:
+This card has the least evidence behind it. Almost all of it is ordinary outdoor practice, not medical guidance.
 
-1. **Tell one person the route and the return hour.** This is the single most valuable line in this file. It turns "nobody knows" into "someone will send help tonight".
-2. **Download the map.** Carry a power bank and a whistle.
-3. **Leave the phone on low power, and off in long stretches with no signal.** Searching for a network drains it.
+1. **[G]** Before the trip: tell one person the route and the return hour. Rescue bodies everywhere say this; the Israeli wording was not found.
+2. **[J]** Before the trip: downloaded map, power bank, whistle.
+3. **[J]** No bars: try 112 anyway, and again from higher, open ground. It may connect through another network. It may not.
+4. **[J]** Stay on the marked trail.
+5. **[G]** Three whistle blasts, three flashes or three shouts is a recognised distress signal.
+6. **[J]** At night, stop. Do not walk cliffs or wadis in the dark.
 
-In the field:
+### 4.6 Removed in the second pass, and why
 
-1. **No bars:** try 112 anyway, then try again from higher, open ground. It may connect through another network. It may also not. Do not burn the battery on it.
-2. **A text needs less signal than a call.** Write where you are and what happened, send it to the person who knows your route, and let the phone keep trying.
-3. **Stay on the marked trail.** Searchers follow trails first.
-4. **Signal in threes:** three whistle blasts, three flashes, three shouts. A bright cloth in the open by day.
-5. **Night:** stop. Do not walk cliffs or wadis in the dark. Cold, not thirst, is the night's problem: wind shelter and every layer on.
-6. **Injured and cannot walk:** make yourself visible from above and from the trail, and save water.
-
-- **Shaky:** almost everything about 112. No official Israeli page says what works without your carrier or without a SIM, and the European emergency-number body reports failures. So the tip is "try", never "it works".
+- "Heat is the bigger killer of hikers than any snake": no figure, no source.
+- "Snakes do not chase" and "most bites happen when a hand or foot goes where the eyes did not": no source.
+- "Small sips of water" while walking out after a snake bite: contradicts MDA's "no food or drink", and I had no source.
+- "Keep the arm still against the body": my own detail.
+- "Add salt or a salty snack": not sure enough of the guideline wording.
+- "About one litre per hour" and "turn back when half the water is gone": the first is an unverified search lead, the second a hiking rule of thumb.
+- "A text needs less signal than a call" and "searchers follow trails first": common claims, no source.
+- "Turn the phone off in stretches with no signal": my own.
+- "Shaky: nothing" on the bleeding card: an overclaim. Nothing in this file is verified.
 
 ## 5. Research findings
 
