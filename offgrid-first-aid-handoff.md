@@ -249,3 +249,88 @@ Do it on the PC, where the web is open. Open in this order:
 - **One writer.** The app is one file. Build the cards on the PC, not in a cloud session, while the PC holds app changes.
 - **Review.** These cards carry more risk than any path so far. They should be first in line for the doctor or paramedic review, next to the `now` and `today` signs.
 - **Log "one line is mine".** Any line without a source gets marked, as in the poison path.
+
+---
+
+## 7. New capsule: drugs and overdose (asked 17.11.2026)
+
+Plan and first draft only. Nothing is in the app or the codex. Same marks as section 4: **[G]** = I remember it as standard guidance, unchecked; **[J]** = my judgment. The cloud session could not open any source, so there is not one verified line here.
+
+### 7.1 Decisions to make before building
+
+- **No "limits" as numbers.** You asked for limits. I recommend against any dose figure, and wrote none. Reasons: there is no safe amount to state for a street drug of unknown strength; tolerance differs between people and drops after a break; and a number in a health app reads as permission. This is the same rule the eating-disorders path took ("no numbers that can become a target"). What the capsule gives instead is 7.4: what makes a dose dangerous.
+- **Wasteland rules do not apply.** An overdose at home or at a party has a phone. So the 11.11 rule holds: first-aid lines only as word-for-word Ministry of Health or MDA quotes. The lines in 7.5 are what to look for in those sources, not app text.
+- **One capsule or two.** An overdose is an event (row "משהו קרה?"). Getting off drugs is a long path through the system (treatment, rights, the family). I'd build two that link to each other. Putting both in one makes the urgent part hard to find.
+- **Overlap with D47 "הרעלה".** D47 already covers medicines swallowed at home and the poison centre. The new capsule should link to it and not repeat it.
+- **Overdose on purpose.** Some overdoses are suicide attempts. The capsule needs one calm line pointing to the mental-health path and ער״ן, written with the same care as D08. This line should go to the professional review first.
+- **Fear of the police.** Families and friends delay calling 101 because they fear arrest. Whether MDA reports drug use to the police is the most useful single fact this capsule can hold. I do not know the answer. Find the official line or leave it out.
+
+### 7.2 Proposed steps: the overdose capsule
+
+| # | Step | Status |
+|---|---|---|
+| 1 | Call 101 now: the signs that mean "now" (7.3) | needs MDA / Ministry quote |
+| 2 | Until the team arrives: what to do, what not to do (7.5) | needs MDA / Ministry quote |
+| 3 | What to tell the team: what was taken, how much, when, with what. Keep the package or what is left | [G]; D47 has a matching "keep the package" step |
+| 4 | The poison centre at Rambam, 04-7771900, 24 hours, open to the public | already sourced in the codex as S264 |
+| 5 | In the ER, and what happens after | to research |
+| 6 | The day after: link to the treatment capsule | [J] |
+
+### 7.3 Effects and overdose signs, by family
+
+All **[G]**, from memory. No doses. Check each row against the Ministry of Health or a toxicology reference before use.
+
+| Family | Examples | Usual effects | Signs of overdose |
+|---|---|---|---|
+| Opioids | heroin, fentanyl, oxycodone, morphine, methadone, tramadol | pain relief, calm, sleepiness, small pupils | cannot be woken, slow or stopped breathing, snoring or gurgling, blue lips |
+| Sedatives | benzodiazepines (clonazepam, diazepam, alprazolam), sleeping pills | calm, sleepiness, loose muscles | deep sleep, slurred speech, slow breathing; much more dangerous with alcohol or opioids |
+| Alcohol | | loss of inhibition, poor balance | cannot be woken, vomiting while not awake, slow breathing, cold skin |
+| Stimulants | cocaine, amphetamines, methamphetamine, MDMA | energy, fast heart, little sleep or appetite | chest pain, very hot body, seizure, extreme agitation or paranoia |
+| Cannabis | hashish, marijuana, edibles | relaxation, changed sense of time, hunger | panic, fast heart, vomiting; rarely life-threatening for an adult, more serious for a small child who ate it |
+| Synthetic cannabinoids | sold as "נייס גאי" and similar | unpredictable | seizure, psychosis, collapse; far more dangerous than cannabis |
+| Dissociatives | ketamine, nitrous oxide | detachment, numbness | not responding, vomiting while not awake, injury from falls |
+| GHB / GBL | | euphoria, sleepiness | sudden deep unconsciousness, slow breathing; the gap between a dose and an overdose is small |
+| Paracetamol | common painkillers and cold medicines | pain and fever relief | **few or no signs in the first day**, then liver failure. A person who took too much and feels fine still needs the ER |
+
+### 7.4 What makes a dose dangerous (in place of limits)
+
+All **[G]**.
+
+- **Mixing.** Opioids, sedatives and alcohol each slow breathing; together far more.
+- **A break.** After days or weeks without the drug (detox, prison, hospital), the old dose can kill.
+- **Unknown content.** A street pill or powder may hold something stronger than what it was sold as.
+- **Using alone.** Nobody is there to call.
+- **A new source or a new route.**
+- **Illness, old age, a child's small body.**
+
+### 7.5 First aid to look for in MDA and Ministry sources
+
+All **[G]**. Not app text until a word-for-word official quote is found.
+
+- Call 101. Say what was taken if known.
+- Not responding but breathing: on the side, in the recovery position. Stay and watch the breathing.
+- Not breathing: resuscitation, as the 101 dispatcher instructs.
+- Do not make the person vomit.
+- Do not leave them to "sleep it off". No cold shower, no coffee.
+- Stimulant overdose with a very hot body: cool the body.
+- Seizure: clear the space around, put nothing in the mouth.
+- Naloxone reverses an opioid overdose. **Whether the public can get it in Israel, and how, I do not know.** Research it.
+
+### 7.6 The treatment capsule: what to research
+
+I am not writing facts here from memory. Names, phone numbers and rights in this area change, and a wrong number in this capsule costs more than a missing one.
+
+- Who treats addiction in Israel: the Ministry of Health's addiction units, the Ministry of Welfare, the health funds. Who pays, and whether a referral or Form 17 is needed.
+- Substitution treatment (methadone, buprenorphine): where, and how to get in.
+- Detox wards and therapeutic communities: public options, waiting, cost.
+- Under-18s: where a parent starts.
+- Rights: Bituach Leumi, sick leave, confidentiality at work and in the army.
+- Help lines for families. ער״ן is 1201. Every other number must be read off its official page.
+- Kol Zchut's pages on addiction and "גמילה" are the place to start.
+
+### 7.7 For the build
+
+- **Serials:** assign on the PC after the commit. The off-grid topic and this one both need a D number after D47.
+- **Signs:** the "cannot be woken" and "slow breathing" signs are level `now`. Check which already exist in `SIGNS` before adding.
+- **Tone:** calm, no judgment of the person who used. The joke rule applies: none here.
+- **Review:** this capsule and the wasteland tips go to the doctor or paramedic before any other content.
