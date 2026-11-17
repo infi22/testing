@@ -2,7 +2,26 @@
 
 Written in a cloud session from the phone. Nothing in `infi22/Health-Codex` was changed from here: no branch, no commit, no push.
 
-Use: open the PC session "Guide-color work in progress" (or a new one in `C:\DEV\Health-Codex`) and paste the section you need.
+**How the owner uses this file:** open a Claude session in `C:\DEV\Health-Codex` and hand it this file. Nothing else to type. The next section tells that session what to do.
+
+---
+
+## 0. For the Claude session on the PC that was handed this file
+
+The owner handed you this file instead of typing instructions. Treat this section as the owner's pick for the session. It was written by a cloud Claude session on 17.11.2026 that could not reach the PC or open any source page. Everything below section 0 is that session's notes: use them as a brief, and check every fact in them yourself.
+
+Do these in order. The repo's own rules in `CLAUDE.md` still apply, including the pre-flight, the Cool Hand Report and asking before a commit or push.
+
+1. **Look before anything else.** Run `git status` and compare with section 1. If the uncommitted work from the morning of 17.11.2026 (D46 eating disorders; D25 widening and D47 poison) is missing or different, stop and tell the owner.
+2. **Ask the owner one question: commit this morning's work to `main`?** If yes, make two commits: eating disorders, then stings and poison. Do not push without a separate yes.
+3. **File this document in the repo.** Save it as `research_notes/Wasteland and drugs/handoff.md`, UTF-8, unchanged, and commit it on its own after step 2. If you were handed it another way, the same file is on GitHub: repository `infi22/testing`, branch `ccr-0b6c5035-mwznsq`, file `offgrid-first-aid-handoff.md`.
+4. **Record the owner's decisions of 17.11.2026 in `CLAUDE.md`:** the wasteland rules (section 3), and two drug capsules instead of one (section 7.1).
+5. **Do the research the cloud could not.** Open every URL in sections 5a, 5b and 5c, copy the exact wording and each page's date, and save the result as `research_notes/Wasteland and drugs/findings.md`. Mark each tip in section 4 and each line in 7.3 to 7.5 as confirmed, changed or unsupported.
+6. **Stop and report to the owner.** Do not write any of this into `next-step/index.html` before the owner has seen the findings.
+
+After the owner's go, the build order is: the wasteland tips, then overdose capsule A, then treatment capsule B. Serials are assigned only after step 2, continuing from D47 and S565.
+
+Still waiting on the owner from the morning session: the snake step (keep MDA's splint line, or show both), and the veto on the D46 drafts. Raise them after step 5, when the three snake pages have been read.
 
 ---
 
