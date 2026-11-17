@@ -260,12 +260,12 @@ Plan and first draft only. Nothing is in the app or the codex. Same marks as sec
 
 - **No "limits" as numbers.** You asked for limits. I recommend against any dose figure, and wrote none. Reasons: there is no safe amount to state for a street drug of unknown strength; tolerance differs between people and drops after a break; and a number in a health app reads as permission. This is the same rule the eating-disorders path took ("no numbers that can become a target"). What the capsule gives instead is 7.4: what makes a dose dangerous.
 - **Wasteland rules do not apply.** An overdose at home or at a party has a phone. So the 11.11 rule holds: first-aid lines only as word-for-word Ministry of Health or MDA quotes. The lines in 7.5 are what to look for in those sources, not app text.
-- **One capsule or two.** An overdose is an event (row "משהו קרה?"). Getting off drugs is a long path through the system (treatment, rights, the family). I'd build two that link to each other. Putting both in one makes the urgent part hard to find.
+- **Two capsules (the owner's decision, 17.11.2026).** Capsule A is the overdose, an event in the row "משהו קרה?". Capsule B is getting off drugs, a long path through the system. Each links to the other: A's last step opens B, and B's signs point back to A.
 - **Overlap with D47 "הרעלה".** D47 already covers medicines swallowed at home and the poison centre. The new capsule should link to it and not repeat it.
 - **Overdose on purpose.** Some overdoses are suicide attempts. The capsule needs one calm line pointing to the mental-health path and ער״ן, written with the same care as D08. This line should go to the professional review first.
 - **Fear of the police.** Families and friends delay calling 101 because they fear arrest. Whether MDA reports drug use to the police is the most useful single fact this capsule can hold. I do not know the answer. Find the official line or leave it out.
 
-### 7.2 Proposed steps: the overdose capsule
+### 7.2 Capsule A, the overdose: proposed steps
 
 | # | Step | Status |
 |---|---|---|
@@ -274,7 +274,7 @@ Plan and first draft only. Nothing is in the app or the codex. Same marks as sec
 | 3 | What to tell the team: what was taken, how much, when, with what. Keep the package or what is left | [G]; D47 has a matching "keep the package" step |
 | 4 | The poison centre at Rambam, 04-7771900, 24 hours, open to the public | already sourced in the codex as S264 |
 | 5 | In the ER, and what happens after | to research |
-| 6 | The day after: link to the treatment capsule | [J] |
+| 6 | The day after: opens capsule B | [J] |
 
 ### 7.3 Effects and overdose signs, by family
 
@@ -316,21 +316,29 @@ All **[G]**. Not app text until a word-for-word official quote is found.
 - Seizure: clear the space around, put nothing in the mouth.
 - Naloxone reverses an opioid overdose. **Whether the public can get it in Israel, and how, I do not know.** Research it.
 
-### 7.6 The treatment capsule: what to research
+### 7.6 Capsule B, getting off drugs: proposed steps
 
-I am not writing facts here from memory. Names, phone numbers and rights in this area change, and a wrong number in this capsule costs more than a missing one.
+The step order is my proposal, **[J]**. It follows the shape of the existing long paths (first door, assessment, treatment, rights, family). Every fact inside a step is still to be researched; I wrote none from memory, because names, phone numbers and rights in this area change, and a wrong number here costs more than a missing one.
 
-- Who treats addiction in Israel: the Ministry of Health's addiction units, the Ministry of Welfare, the health funds. Who pays, and whether a referral or Form 17 is needed.
-- Substitution treatment (methadone, buprenorphine): where, and how to get in.
-- Detox wards and therapeutic communities: public options, waiting, cost.
-- Under-18s: where a parent starts.
-- Rights: Bituach Leumi, sick leave, confidentiality at work and in the army.
-- Help lines for families. ער״ן is 1201. Every other number must be read off its official page.
-- Kol Zchut's pages on addiction and "גמילה" are the place to start.
+| # | Step | What to research |
+|---|---|---|
+| 1 | The first door: who to turn to | The family doctor, the fund, the Ministry of Health's addiction units, the welfare office. Which one opens the rest |
+| 2 | Assessment: what kind of treatment fits | Who decides, how long it takes, what it costs |
+| 3 | Detox | Wards and other public options, waiting times, whether a referral or Form 17 is needed |
+| 4 | Substitution treatment | Methadone and buprenorphine: where, and how to get in |
+| 5 | Long treatment and rehabilitation | Day centres, therapeutic communities, who pays |
+| 6 | Under 18 | Where a parent starts, and what the child must agree to |
+| 7 | Rights and money | Bituach Leumi, sick leave, confidentiality at work and in the army |
+| 8 | The family | Help lines and support for relatives. ער״ן is 1201; every other number must be read off its official page |
+| 9 | A relapse | What to do, and the link back to capsule A: after a break, the old dose can kill (7.4) |
+
+- **Start the research at Kol Zchut**, on its addiction and "גמילה" pages, then the Ministry of Health and the Ministry of Welfare.
+- **Signs for capsule B** are the slow ones (level `gp` or `week`): use that is growing, withdrawal, trouble at work or school. They need drafting and review like any other signs.
+- **Area on the home screen:** most likely "מצב רוח, שינה ולחץ", and "ילדים" for step 6. Your call.
 
 ### 7.7 For the build
 
-- **Serials:** assign on the PC after the commit. The off-grid topic and this one both need a D number after D47.
+- **Serials:** assign on the PC after the commit. Three new topics need a D number after D47: the wasteland tips, capsule A and capsule B.
 - **Signs:** the "cannot be woken" and "slow breathing" signs are level `now`. Check which already exist in `SIGNS` before adding.
 - **Tone:** calm, no judgment of the person who used. The joke rule applies: none here.
 - **Review:** this capsule and the wasteland tips go to the doctor or paramedic before any other content.
